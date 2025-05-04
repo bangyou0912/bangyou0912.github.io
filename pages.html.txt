@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GPU 驗證報告</title>
+  <style>
+    body {
+      font-family: "Noto Sans TC", sans-serif;
+      margin: 20px;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    .container {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #0066cc;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+    th {
+      background-color: #f0f0f0;
+      text-align: left;
+    }
+    .section-title {
+      margin-top: 30px;
+      font-size: 20px;
+      border-bottom: 2px solid #0066cc;
+      padding-bottom: 5px;
+    }
+    .badge {
+      background-color: #28a745;
+      color: white;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>GPU 驗證報告</h1>
+    <p>驗證編號：<strong>GPURE-20250504-0012</strong></p>
+    
+    <div class="section-title">① 基本資訊</div>
+    <table>
+      <tr><th>顯示卡型號</th><td>NVIDIA GeForce RTX 3070 Ti</td></tr>
+      <tr><th>記憶體</th><td>8GB GDDR6X</td></tr>
+      <tr><th>製程技術</th><td>8nm</td></tr>
+      <tr><th>BIOS 版本</th><td>94.04.46.00.AS</td></tr>
+      <tr><th>產品外觀</th><td>✅ 無損傷、✅ 無鏽蝕、✅ 無風扇異音</td></tr>
+    </table>
+
+    <div class="section-title">② 效能測試</div>
+    <table>
+      <tr><th>測試項目</th><th>結果</th><th>標準值</th><th>說明</th></tr>
+      <tr><td>3DMark Time Spy</td><td>12,200</td><td>約 12,100</td><td><span class="badge">正常</span></td></tr>
+      <tr><td>GPU 核心頻率</td><td>1800 MHz</td><td>1785 MHz</td><td><span class="badge">一致</span></td></tr>
+    </table>
+
+    <div class="section-title">③ 溫度與穩定性</div>
+    <table>
+      <tr><th>項目</th><th>數值</th><th>標準值</th><th>判斷</th></tr>
+      <tr><td>待機溫度</td><td>38°C</td><td><45°C</td><td>✅</td></tr>
+      <tr><td>高負載溫度</td><td>77°C</td><td><85°C</td><td>✅</td></tr>
+    </table>
+
+    <div class="section-title">④ 驗證總結</div>
+    <table>
+      <tr><th>評等</th><td>A 級（功能與效能皆正常）</td></tr>
+      <tr><th>是否建議購買</th><td>✅ 是</td></tr>
+      <tr><th>建議售價區間</th><td>NT$11,000 ～ NT$12,500</td></tr>
+      <tr><th>附註</th><td>建議三個月內重新補導熱膏以延長壽命。</td></tr>
+    </table>
+
+    <p style="margin-top: 30px; font-size: 14px; color: #666;">
+      驗證日期：2025-05-04｜驗證單位：GPURE 驗證中心｜工程師：王大明
+    </p>
+  </div>
+</body>
+</html>
