@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GPURE 二手顯卡交易平台</title>
+  <style>
+    body {
+      font-family: "Noto Sans TC", sans-serif;
+      background-color: #f5f5f5;
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background-color: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      text-align: center;
+      color: #0066cc;
+    }
+    form label {
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin: 8px 0 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    input[type="file"] {
+      padding: 4px;
+    }
+    .required::after {
+      content: " *";
+      color: red;
+    }
+    button {
+      background-color: #28a745;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+    nav {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #007bff;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+    .card h3 {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>GPURE 二手顯卡交易平台</h1>
+
+    <nav>
+      <a href="#register">賣家註冊</a> |
+      <a href="#login">賣家登入</a> |
+      <a href="#list">商品總覽</a> |
+      <a href="#form">商品上架</a>
+    </nav>
+
+    <h2 id="register">賣家註冊</h2>
+    <form>
+      <label class="required">使用者名稱</label>
+      <input type="text" required>
+
+      <label class="required">電子郵件</label>
+      <input type="email" required>
+
+      <label class="required">設定密碼</label>
+      <input type="password" required>
+
+      <button type="submit">註冊</button>
+    </form>
+
+    <h2 id="login">賣家登入</h2>
+    <form>
+      <label class="required">電子郵件</label>
+      <input type="email" required>
+
+      <label class="required">密碼</label>
+      <input type="password" required>
+
+      <button type="submit">登入</button>
+    </form>
+
+    <h2 id="list">商品總覽（模擬）</h2>
+    <div class="card">
+      <h3>MSI RTX 3060 Ti Gaming X</h3>
+      <p>描述：無礦、風扇正常、附發票。</p>
+      <p>價格：NT$8500</p>
+    </div>
+    <div class="card">
+      <h3>GIGABYTE RX 6600 Eagle</h3>
+      <p>描述：用於遊戲，過保固但狀態良好。</p>
+      <p>價格：NT$6800</p>
+    </div>
+
+    <h2 id="form">商品上架表單</h2>
+    <form>
+      <label class="required">商品照片（至少一張）</label>
+      <input type="file" name="main_image" accept="image/*" required multiple>
+
+      <label class="required">商品描述</label>
+      <textarea name="description" rows="4" required></textarea>
+
+      <label class="required">顯卡型號</label>
+      <input type="text" name="model" required>
+
+      <label class="required">購買日期</label>
+      <input type="date" name="purchase_date" required>
+
+      <label class="required">是否已過保固期</label>
+      <select name="warranty" required>
+        <option value="">請選擇</option>
+        <option value="yes">是，已過保</option>
+        <option value="no">否，仍在保固期</option>
+      </select>
+
+      <label class="required">使用用途（是否挖礦）</label>
+      <select name="usage" required>
+        <option value="">請選擇</option>
+        <option value="gaming">僅遊戲使用</option>
+        <option value="office">文書用途</option>
+        <option value="mining">曾用於挖礦</option>
+      </select>
+
+      <label class="required">販售價格（新台幣）</label>
+      <input type="number" name="price" required>
+
+      <label>購買發票或保固證明（選填）</label>
+      <input type="file" name="invoice" accept="image/*,application/pdf">
+
+      <label>購買地點（選填）</label>
+      <input type="text" name="purchase_place">
+
+      <label>其他照片（選填）</label>
+      <input type="file" name="extra_photos" accept="image/*" multiple>
+
+      <button type="submit">提交上架</button>
+    </form>
+  </div>
+</body>
+</html>
